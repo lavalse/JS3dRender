@@ -1,74 +1,30 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    iframe {
-      width: 320px;
-      height: 220px;
+    body{
+      background-color: black;
     }
-
-    .card {
-      display: inline-block;
-      outline: 1px solid royalblue;
-      margin: 10px;
-      padding: 5px;
+    #canvas{
+      width: 800px;
+      height: 600px;
+      border: 1px solid #FFFFFF;
     }
   </style>
 </head>
-
 <body>
-  <script>
-    const body = document.querySelector('body')
-    const readme = [
-      {
-        index: '0',
-        title: '平面canvas画线demo介绍与画线',
-        desp: 'demo介绍, 画线',
-      },
-      {
-        index: '1.1',
-        title: '绘制mesh正视线框图',
-        desp: 'vertex定义, 插值, mesh定义',
-      },
-      {
-        index: '1.2',
-        title: '逐步丰富mesh线框正视图',
-        desp: '矩阵运算',
-      },
-      {
-        index: '1.3',
-        title: '绘制旋转的mesh线框',
-        desp: '矩阵运算, project投影',
-      },
-      {
-        index: '2.1',
-        title: '给mesh线框涂上颜色',
-        desp: '片元着色',
-      },
-      {
-        index: '2.2',
-        title: '操纵像素',
-        desp: 'putImageData',
-      },
-      {
-        index: '2.3',
-        title: '利用缓冲区绘制',
-        desp: 'dataBuffer, depthBuffer',
-      },
-      {
-        index: '2.4',
-        title: '深度缓冲实现片元绘制',
-        desp: 'dataBuffer, depthBuffer',
-      },
-    ]
-    readme.forEach(item => body.insertAdjacentHTML('beforeEnd', `
-    <div class='card'>
-    <h3>实验${item.index}: ${item.title}</h3><br />
-    <span>${item.desp}</span><br />
-    <iframe src="${item.index}/index.html" frameborder="0"></iframe>
-    </div>
-    `))
-  </script>
+  <canvas id="canvas"></canvas>
+  <script src="./src/utils.js"></script>
+  <script src="./src/color.js"></script>
+  <script src="./src/vector.js"></script>
+  <script src="./src/vertex.js"></script>
+  <script src="./src/mesh.js"></script>
+  <script src="./src/canvas.js"></script>
+  
+  <script src="./main_1_1.js"></script>
 </body>
-
 </html>
